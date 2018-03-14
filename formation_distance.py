@@ -3,6 +3,17 @@ from scipy import linalg as la
 
 class formation_distance:
     def __init__(self, m, l, d, mu, tilde_mu, B, c_shape, c_vel):
+        """
+
+        :param m: Problem dimensions (2 or 3)
+        :param l: ???
+        :param d: Desired edge lengths (in same order as adjacency matrix B)
+        :param mu: Desired edge distortion
+        :param tilde_mu: Desired edge distortion
+        :param B: The incidence matrix defining the formation shape. 1 means outgoing node, -1 means incoming
+        :param c_shape: formation control intensity
+        :param c_vel: damping intensity
+        """
         self.m = m
         self.l = l
         self.d = d
